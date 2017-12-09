@@ -1,0 +1,44 @@
+html{
+	background-color: black;
+	overflow-y: hidden;
+}
+
+body{	
+	background-color: black;
+}
+
+*{
+	margin: 0;
+	border: 0;
+	padding: 0;
+	color: white;
+}
+
+#nav-ltia{
+	background-color: black;
+	opacity: 0;
+}
+
+#app{
+	background-color: black;
+}
+
+.img-responsive{
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.logo-navbar{
+	max-width: 100%;
+	height: auto;
+}
+
+.navbar-brand{
+	width: 7%;
+}
+
+.container-fluid{
+	padding: 0;
+}
