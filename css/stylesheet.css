@@ -61,10 +61,6 @@ li{
 	color: rgba(0,0,0,0);
 }
 
-.nav-ltia-item{
-	display: inline-block;
-}
-
 #maintenance-box{
 	text-align: center;
 	position: absolute;
@@ -78,26 +74,74 @@ li{
 }
 
 #maintenance-box h3{
-	font-size: 38px;
+	font-size: 380%;
 }
 
 #maintenance-box p{
-	font-size: 27px;
-}
-
-
-.div-socialmedia{
-	background-color: white;
-	width: 100%;
-	height: auto;
-	
+	font-size: 270%;
 }
 
 .logo-socialmedia{
+	background-color: white;
 	width: 100%;
-	height: 100%;
 }
 
-.li-socialmedia{
-	width:2%;
+#logo{
+	margin: 0 auto;
+	max-height:80%;
 }
+
+#logos-list{
+	display: inline-block;
+	float: right;
+	width: 90%;
+}
+
+.nav-ltia-item{
+	display: inline-block;
+	float: right;
+	max-width: 50px;
+}
+
+#facebook:hover{
+    background-color: #3b5998;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+#instagram:hover{
+    background-color: #c1558b;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+#behance:hover{
+    background-color: #d7dadb;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+#linkedin:hover{
+    background-color: #304559;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+#github:hover{
+    background-color: #5c436b;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+#youtube:hover{
+    background-color: #ff0000;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+

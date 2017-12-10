@@ -4,19 +4,24 @@ $(document).ready(function(){
 
 	boxHeight = $("#maintenance-box").height();
 	//$(".mText").hide();
-	$("#nav-ltia").hide().delay(1600).show(0, function(){
+	$("#nav-ltia").hide().delay(1550).show(0, function(){
 
 		$("#animation").remove();
 		$("#container-logo").prepend('<img src="img/logo.png" id="logo" class="img-responsive" style="opacity: 0;"></img>');
-		$("#logo").animate({opacity: '0.5'}, 'slow');
-		$("#nav-ltia").animate({opacity: '1.0'}, 'slow');
+		$("#logo").animate({opacity: '0.5'}, 1000);
+		$("#nav-ltia").animate({opacity: '1.0'}, 1000);
 
 
 		$("#logo").on("load", function(){
 			container.height = $("#container-logo").height();
-			$("#maintenance-box").css("top", container.height/2);
+			var windowHeight = $(window).height();
+			container.position.top = $("#container-logo").position().top;
+			$("#maintenance-box").css("top", container.height/2 + container.position.top/2);
+			$("#container-logo").height(windowHeight - container.position.top);
+			$("#logo").height(windowHeight - container.position.top);
 			
 			calculateCenter();
+
 		});
 
 	});
@@ -62,7 +67,6 @@ $(document).ready(function(){
   		//Cálculo da distância
   		var distance, percent = 20;
 		distance = Math.sqrt(Math.pow((mouse.x - center.x),2) + Math.pow((mouse.y - center.y),2));
-		  		console.log(distance);
 
 		//Cálculo de valor pra ir na porcentagem
 
