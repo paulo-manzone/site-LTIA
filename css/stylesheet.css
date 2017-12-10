@@ -84,6 +84,8 @@ li{
 .logo-socialmedia{
 	background-color: white;
 	width: 100%;
+	background-size: 45px 45px;
+	background-position: center;
 }
 
 #logo{
@@ -95,6 +97,7 @@ li{
 	display: inline-block;
 	float: right;
 	width: 90%;
+	font-size: 0;
 }
 
 .nav-ltia-item{

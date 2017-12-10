@@ -1,15 +1,25 @@
 $(document).ready(function(){
 
-	var angle, container = {width: 0, height: 0, position: {top: 0}}, box = {width: 0, height: 0, position: {left: 0, top: 0}}, center = {x: 0, y: 0}, mouse = {x: 0, y: 0};
+	var mobile = false, angle, container = {width: 0, height: 0, position: {top: 0}}, box = {width: 0, height: 0, position: {left: 0, top: 0}}, center = {x: 0, y: 0}, mouse = {x: 0, y: 0};
 
 	boxHeight = $("#maintenance-box").height();
-	//$(".mText").hide();
+
+	var ua = navigator.userAgent;
+
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
+       mobile = true;
+      	$(".mText").css('color','rgba(255,255,255,255)');
+		$(".mText").css("opacity", "0");
+    }
+
 	$("#nav-ltia").hide().delay(1550).show(0, function(){
 
 		$("#animation").remove();
 		$("#container-logo").prepend('<img src="img/logo.png" id="logo" class="img-responsive" style="opacity: 0;"></img>');
 		$("#logo").animate({opacity: '0.5'}, 1000);
 		$("#nav-ltia").animate({opacity: '1.0'}, 1000);
+		if(mobile)
+			$(".mText").animate({opacity: '0.9'}, 1000);
 
 
 		$("#logo").on("load", function(){
@@ -18,7 +28,8 @@ $(document).ready(function(){
 			container.position.top = $("#container-logo").position().top;
 			$("#maintenance-box").css("top", container.height/2 + container.position.top/2);
 			$("#container-logo").height(windowHeight - container.position.top);
-			$("#logo").height(windowHeight - container.position.top);
+			if(!mobile)
+				$("#logo").height(windowHeight - container.position.top);
 			
 			calculateCenter();
 
@@ -38,9 +49,12 @@ $(document).ready(function(){
 	}
 
 
-	$( document ).on("mousemove", function(e) {
+	$(document).on("mousemove", function(e) {
 
 		//Cálculo do ângulo
+
+		if(mobile)
+			return;
 
   		mouse.x = e.pageX;
   		mouse.y = e.pageY;
