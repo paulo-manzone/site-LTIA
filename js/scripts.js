@@ -37,6 +37,10 @@ $(document).ready(function(){
 
 	});
 
+	$(window).resize(function(){
+		calculateCenter();
+	});
+
 	function calculateCenter(){
 		//Cálculo do centro
 		container.width = $("#container-logo").width();
