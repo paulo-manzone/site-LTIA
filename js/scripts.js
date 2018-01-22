@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	    console.log('Dispositivo Movel');
+	}
+
 	var mobile = false, angle, container = {width: 0, height: 0, position: {top: 0}}, box = {width: 0, height: 0, position: {left: 0, top: 0}}, center = {x: 0, y: 0}, mouse = {x: 0, y: 0};
 
 	boxHeight = $("#maintenance-box").height();
@@ -101,5 +105,6 @@ $(document).ready(function(){
   		$(".mText").css("-wenkit-text-fill-color","transparent");
 
 	});
+
 	
 });
