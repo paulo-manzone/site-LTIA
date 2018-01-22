@@ -53,11 +53,15 @@ $(document).ready(function(){
 	}
 
 
+
+
 	$(document).on("mousemove", function(e) {
 
 		//Cálculo do ângulo
 
 		if(mobile)
+			return;
+		if(ehiOS())
 			return;
 
   		mouse.x = e.pageX;
@@ -101,6 +105,12 @@ $(document).ready(function(){
   		$(".mText").css("-wenkit-text-fill-color","transparent");
 
 	});
+
+	function ehiOS(){
+   		var userAgent = window.navigator.userAgent;
+   		return (/iP(hone|od|ad)/.test(userAgent));
+	}
+	
 
 	
 });
