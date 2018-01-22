@@ -52,18 +52,26 @@ $(document).ready(function(){
 		center.y = box.position.top + box.height/2 + container.position.top;
 	}
 
+	if(ehiOS()){
+
+	}
+
 
 
 
 	$(document).on("mousemove", function(e) {
 
-		//Cálculo do ângulo
+		//Correção webkit iphone
 
 		if(mobile)
 			return;
 		if(ehiOS())
 			return;
+		if(iOS())
+			return;
 
+
+		//Cálculo do ângulo
   		mouse.x = e.pageX;
   		mouse.y = e.pageY;
 
@@ -100,15 +108,22 @@ $(document).ready(function(){
 		
 
 
-  		$(".mText").css("background", "-webkit-linear-gradient("+angle+"deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)"+ percent+ "%)");
-  		$(".mText").css("-webkit-background-clip","text");
-  		$(".mText").css("-wenkit-text-fill-color","transparent");
+  		if(!ehiOS()){
+  			$(".mText").css("background", "-webkit-linear-gradient("+angle+"deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)"+ percent+ "%)");
+  			$(".mText").css("-webkit-background-clip","text");
+  			$(".mText").css("-wenkit-text-fill-color","transparent");
+  		} 
 
 	});
 
 	function ehiOS(){
-   		var userAgent = window.navigator.userAgent;
+   		var userAgent = navigator.userAgent;
    		return (/iP(hone|od|ad)/.test(userAgent));
+	}
+
+	function iOS(){
+		var iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
+		return iOS;
 	}
 	
 
