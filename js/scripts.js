@@ -8,8 +8,11 @@ $(document).ready(function(){
 
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
        mobile = true;
+       window.alert("MOBILE!");
       	$(".mText").css('color','rgba(255,255,255,255)');
 		$(".mText").css("opacity", "0");
+    }else{
+    	window.alert("Nao MOBILE!");
     }
 
 	$("#nav-ltia").hide().delay(1550).show(0, function(){
@@ -52,10 +55,6 @@ $(document).ready(function(){
 		center.y = box.position.top + box.height/2 + container.position.top;
 	}
 
-	if(ehiOS()){
-
-	}
-
 
 
 
@@ -64,10 +63,6 @@ $(document).ready(function(){
 		//Correção webkit iphone
 
 		if(mobile)
-			return;
-		if(ehiOS())
-			return;
-		if(iOS())
 			return;
 
 
@@ -115,6 +110,8 @@ $(document).ready(function(){
   		} 
 
 	});
+
+	//FUNÇÕES DE TESTE IOS
 
 	function ehiOS(){
    		var userAgent = navigator.userAgent;
