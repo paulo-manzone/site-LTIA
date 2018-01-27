@@ -74,6 +74,9 @@ $(document).ready(function(){
 		if(mobile){
 			return;
 		}
+		if(ehiOS()){
+			return;
+		}
 
 
 		//Cálculo do ângulo
