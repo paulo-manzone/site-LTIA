@@ -8,11 +8,11 @@ $(document).ready(function(){
 
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
        mobile = true;
-       window.alert("MOBILE!");
+       //window.alert("MOBILE!");
       	$(".mText").css('color','rgba(255,255,255,255)');
 		$(".mText").css("opacity", "0");
     }else{
-    	window.alert("Nao MOBILE!");
+    	//window.alert("Nao MOBILE!");
     }
 
 	$("#nav-ltia").hide().delay(1550).show(0, function(){
@@ -62,8 +62,10 @@ $(document).ready(function(){
 
 		//Correção webkit iphone
 
-		if(mobile)
+		if(mobile){
+			$(".mText").text("SITE EM MANUTENÇÃO!")
 			return;
+		}
 
 
 		//Cálculo do ângulo
@@ -101,13 +103,10 @@ $(document).ready(function(){
 		if(distance<0) distance = 0;
 
 		
-
-
-  		if(!ehiOS()){
   			$(".mText").css("background", "-webkit-linear-gradient("+angle+"deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)"+ percent+ "%)");
   			$(".mText").css("-webkit-background-clip","text");
   			$(".mText").css("-wenkit-text-fill-color","transparent");
-  		} 
+
 
 	});
 
@@ -122,6 +121,7 @@ $(document).ready(function(){
 		var iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
 		return iOS;
 	}
+
 	
 
 	
