@@ -107,28 +107,28 @@ li{
 }
 
 #facebook:hover{
-    background-color: #3b5998;
+    background-color: #8b9dc3;
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
 }
 
 #instagram:hover{
-    background-color: #c1558b;
+    background-color: #5d1d06;
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
 }
 
 #behance:hover{
-    background-color: #d7dadb;
+    background-color: #3a77d8;
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
 }
 
 #linkedin:hover{
-    background-color: #304559;
+    background-color: #0e76a8;
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;

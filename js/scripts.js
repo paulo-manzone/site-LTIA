@@ -5,23 +5,23 @@ $(document).ready(function(){
 	boxHeight = $("#maintenance-box").height();
 
 	var ua = navigator.userAgent;
-	window.alert("POPUP TESTE: Eh pra aparecer sempre");
+	//window.alert("POPUP TESTE: Eh pra aparecer sempre");
 
 	if(ehiOS()){
-		window.alert("POPUP ehiOS()");
+		//window.alert("POPUP ehiOS()");
 	}
 
 	if(iOS()){
-		window.alert("POPUP iOS()");
+		//window.alert("POPUP iOS()");
 	}
 
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
        mobile = true;
-       window.alert("MOBILE!");
+       //window.alert("MOBILE!");
       	$(".mText").css('color','rgba(255,255,255,255)');
 		$(".mText").css("opacity", "0");
     }else{
-    	window.alert("Nao MOBILE!");
+    	//window.alert("Nao MOBILE!");
     }
 
 	$("#nav-ltia").hide().delay(1550).show(0, function(){
