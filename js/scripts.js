@@ -5,6 +5,15 @@ $(document).ready(function(){
 	boxHeight = $("#maintenance-box").height();
 
 	var ua = navigator.userAgent;
+	window.alert("POPUP TESTE: Eh pra aparecer sempre");
+
+	if(ehiOS()){
+		window.alert("POPUP ehiOS()");
+	}
+
+	if(iOS()){
+		window.alert("POPUP iOS()");
+	}
 
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
        mobile = true;
